@@ -1,0 +1,49 @@
+<style>
+    .custom_gallery_slider  img{
+        width: 100%;
+    }
+</style>
+
+
+<div class="product_gallery">
+<div class="custom_gallery_slider mySwiper">
+  <div class="swiper-wrapper">
+    {% for media in product.media %}
+      <div class="swiper-slide">
+        <img src="{{ media.preview_image | image_url }}">
+      </div>
+    {% endfor %}
+  </div>
+</div>
+</div>
+
+{% schema %}
+{
+  "name": "Product Main",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Banner Image",
+      "type": "image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "bg_image",
+          "label": "Select the image",
+          "info": "Recommended Size 2000x345"
+        },
+        {
+          "type": "article",
+          "id": "article",
+          "label": "Select a article"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Main"
+    }
+  ]
+}
+{% endschema %}
