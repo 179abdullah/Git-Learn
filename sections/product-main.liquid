@@ -1,13 +1,22 @@
-<section class="product_main_inner">
-  <div class="page-width">
-    <div class="product_main_wrapper">
-        <div class="product_main_gallery">
-            {% render 'custom_gallery' product: product, block: blocks  %}
-        </div>
-        <div class="product_main_content"></div>
-    </div>
+
+<style>
+    .custom_gallery_slider  img{
+        width: 100%;
+    }
+</style>
+
+
+<div class="product_gallery">
+<div class="custom_gallery_slider mySwiper">
+  <div class="swiper-wrapper">
+    {% for media in product.media %}
+      <div class="swiper-slide">
+        <img src="{{ media.preview_image | image_url }}">
+      </div>
+    {% endfor %}
   </div>
-</section>
+</div>
+</div>
 
 {% schema %}
   {
