@@ -1,0 +1,9 @@
+<div class="custom_gallery_slider mySwiper">
+  <div class="swiper-wrapper">
+    {% for media in product.media %}
+      <div class="swiper-slide">
+        <img src="{{ media.preview_image | image_url }}">
+      </div>
+    {% endfor %}
+  </div>
+</div>

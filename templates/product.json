@@ -9,6 +9,11 @@
  */
 {
   "sections": {
+    "product_main_RxUwDr": {
+      "type": "product-main",
+      "name": "Product Main",
+      "settings": {}
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -66,6 +71,7 @@
         "description",
         "share"
       ],
+      "disabled": true,
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
@@ -102,6 +108,7 @@
     }
   },
   "order": [
+    "product_main_RxUwDr",
     "main",
     "related-products"
   ]
