@@ -1,4 +1,4 @@
-
+git remote -v
 <style>
     .custom_gallery_slider  img{
         width: 100%;
@@ -9,6 +9,7 @@
 <div class="product_gallery">
 <div class="custom_gallery_slider mySwiper">
   <div class="swiper-wrapper">
+    test
     {% for media in product.media %}
       <div class="swiper-slide">
         <img src="{{ media.preview_image | image_url }}">
